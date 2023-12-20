@@ -2,7 +2,7 @@
 export default async function Home() {
 
   try {
-    const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`);
+    const response = await fetch(`https://localhost:3000/api/products`);
 
     if (response.ok) {
       const data = await response.json();
@@ -14,12 +14,15 @@ export default async function Home() {
     console.error('An error occurred while fetching the data:', error);
   }
 
+  const json = await response.json()
+  console.log(json)
+
   const data = "hola";
 
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <div>{data}</div>
+    <div>{json}</div>
     </main>
   )
 }
