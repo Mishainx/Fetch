@@ -6,12 +6,6 @@ export default async function Home() {
     const data = await response.json()
     console.log(data)
 
-    if (response.ok) {
-      const data = await response.json();
-      console.log(data);
-    } else {
-      console.error(`Error: ${response.status} - ${response.statusText}`);
-    }
   } catch (error) {
     console.error('An error occurred while fetching the data:', error);
   }
