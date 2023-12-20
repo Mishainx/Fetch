@@ -2,7 +2,7 @@
 export default async function Home() {
 
   try {
-    const response = await fetch(`https://fetch-knoxezhqo-mishainx.vercel.app/api/products`);
+    const response = await fetch(`http://fetch-knoxezhqo-mishainx.vercel.app/api/products`);
 
     if (response.ok) {
       const data = await response.json();
