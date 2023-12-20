@@ -1,6 +1,7 @@
 export default async function Home() {
+  const hola
   try{
-    const hola = "hola"
+   hola = "hola"
   }
   catch(error){
     throw error
