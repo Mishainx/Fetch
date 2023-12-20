@@ -8,7 +8,7 @@ export default function Home() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`);
+        const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`);
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
