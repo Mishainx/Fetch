@@ -4,7 +4,7 @@ const nextConfig = {
         return [
           {
             // Apertura total CORS para entorno de desarrollo
-            source: '0.0.0.0',
+            source:  ` ${process.env.NEXT_PUBLIC_VERCEL_URL}`,
             headers: [
               {
                 key: 'Access-Control-Allow-Origin',
