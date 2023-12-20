@@ -5,7 +5,7 @@ export default async function Home() {
   data = await response.json()
   }
   catch(error){
-    throw error
+    console.log(error.message)
   }
 
   return (
