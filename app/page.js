@@ -1,24 +1,25 @@
-export default async function Home() {
-  try{
-    const [data, setData] = useState(null);
+import React, { useEffect, useState } from 'react';
 
-    useEffect(() => {
-      async function fetchData() {
-        try {
-          const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`);
-          const jsonData = await response.json();
-          setData(jsonData);
-        } catch (error) {
-          console.log(error.message);
-        }
+export default function Home() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`);
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.log(error.message);
       }
-  
-      fetchData();
-    }, []);
+    }
+
+    fetchData();
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <div>{data}</div>
+      <div>{data ? JSON.stringify(data) : 'Cargando...'}</div>
     </main>
-  )
-}
+  );
 }
