@@ -2,9 +2,8 @@
 export default async function Home() {
 
   try {
-    const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`);
+    const response = await fetch(`https://fetch-ten-rho.vercel.app//api/products`);
     const data = await response.json()
-    console.log(data)
 
   } catch (error) {
     console.error('An error occurred while fetching the data:', error);
@@ -12,7 +11,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <div>hola</div>
+    <div>{data}</div>
     </main>
   )
 }
