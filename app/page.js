@@ -1,16 +1,14 @@
-"use client"
-
-
-
 export default async function Home() {
-
-  const fetch = await fetch(`https://${VERCEL_URL}/api/products`)
-  const data = await fetch.json()
-  console.log(await data)
+  try{
+    const hola = "hola"
+  }
+  catch(error){
+    throw error
+  }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <div>hola</div>
+    <div>{hola}</div>
     </main>
   )
 }
