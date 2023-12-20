@@ -3,6 +3,8 @@ export default async function Home() {
 
   try {
     const response = await fetch(`/api/products`);
+    const json = await response.json()
+    console.log(json)
 
     if (response.ok) {
       const data = await response.json();
@@ -14,12 +16,9 @@ export default async function Home() {
     console.error('An error occurred while fetching the data:', error);
   }
 
-  const json = await response.json()
-  console.log(json)
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <div>{json}</div>
+    <div>hola</div>
     </main>
   )
 }
