@@ -5,6 +5,6 @@ export const GET = async (request,{params}) =>{
             return NextResponse.json("macaco", { status: 200 });
     }
     catch(error){
-        return NextResponse.error("Error al obtener producto.", { status: 500 })
+        return NextResponse.json("Error al obtener producto.", { status: 500 })
     }
 }
