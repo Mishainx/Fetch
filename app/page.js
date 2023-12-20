@@ -2,7 +2,7 @@
 export default async function Home() {
 
   try {
-    const response = await fetch(`https://localhost:3000/api/products`);
+    const response = await fetch(`/api/products`);
 
     if (response.ok) {
       const data = await response.json();
@@ -16,9 +16,6 @@ export default async function Home() {
 
   const json = await response.json()
   console.log(json)
-
-  const data = "hola";
-
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
