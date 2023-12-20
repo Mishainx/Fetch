@@ -1,7 +1,8 @@
 export default async function Home() {
-  let hola
+  let data
   try{
-   hola = "hola"
+  const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products `)
+  data = await response.json()
   }
   catch(error){
     throw error
@@ -9,7 +10,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    <div>{hola}</div>
+    <div>{data}</div>
     </main>
   )
 }
