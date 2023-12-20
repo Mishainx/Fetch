@@ -1,8 +1,8 @@
 
 export default async function Home() {
 
-  const response = await fetch( `https://${process.env.NEXT_PUBLIC_VERCEL_URL}:3000/api/products`)
-  const data = await response.json()
+  const response = await fetch( `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`)
+  const data = "hola"
 
 
   return (
