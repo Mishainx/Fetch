@@ -1,9 +1,20 @@
 
 export default async function Home() {
 
-  const response = await fetch( `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`)
-  console.log(response)
-  const data = "hola"
+  try {
+    const response = await fetch(`https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`);
+
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+    } else {
+      console.error(`Error: ${response.status} - ${response.statusText}`);
+    }
+  } catch (error) {
+    console.error('An error occurred while fetching the data:', error);
+  }
+
+  const data = "hola";
 
 
   return (
