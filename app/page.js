@@ -1,5 +1,4 @@
 export default async function Home() {
-  let data
   try{
     const [data, setData] = useState(null);
 
