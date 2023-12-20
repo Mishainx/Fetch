@@ -3,7 +3,8 @@ export default async function Home() {
 
   try {
     const response = await fetch(`https://fetch-ten-rho.vercel.app/api/products`);
-    const data = response
+    const data = await response.json()
+    console.log(data)
 
     if (response.ok) {
       const data = await response.json();
