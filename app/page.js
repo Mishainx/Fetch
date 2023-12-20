@@ -2,7 +2,7 @@
 export default async function Home() {
 
   try {
-    const response = await fetch(`http://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/products`);
+    const response = await fetch(`http://${process.env.VERCEL_URL}/api/products`);
 
     if (response.ok) {
       const data = await response.json();
