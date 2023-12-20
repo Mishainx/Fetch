@@ -4,7 +4,7 @@
 
 export default async function Home() {
 
-  const fetch = await fetch(`https://${NEXT_PUBLIC_VERCEL_URL}/api/products`)
+  const fetch = await fetch(`https://${VERCEL_URL}/api/products`)
   const data = await fetch.json()
   console.log(await data)
 
