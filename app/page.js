@@ -4,6 +4,7 @@ export default async function Home() {
     const response = await fetch(`https://fetch-ten-rho.vercel.app//api/products`);
     const data = await response.json()
 
+    console.log(`https://fetch-ten-rho.vercel.app//api/products`)
     console.log(VERCEL_URL)
 
   return (
