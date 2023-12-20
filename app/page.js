@@ -1,5 +1,5 @@
 export default async function Home() {
-  const hola
+  let hola
   try{
    hola = "hola"
   }
